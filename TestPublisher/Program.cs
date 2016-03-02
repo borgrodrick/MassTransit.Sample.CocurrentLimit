@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Threading;
+using Configuration;
 using Contracts;
-using MassTransit;
-using MassTransit.Log4NetIntegration.Logging;
 
 namespace TestPublisher
 {
@@ -10,14 +8,8 @@ namespace TestPublisher
     {
         static void Main(string[] args)
         {
-            Log4NetLogger.Use();
-            var bus = Bus.Factory.CreateUsingRabbitMq(x =>
-            {
-                x.Host(new Uri("rabbitmq://localhost/"), h => { });
-            }
-              );
-            var busHandle = bus.Start();
-            var text = "";
+            var bus = BusInitializer.CreateBus("TestPublisher", x => { });
+            string text = "";
 
             while (text != "quit")
             {
@@ -34,10 +26,9 @@ namespace TestPublisher
                     };
                     bus.Publish<SomethingHappened>(message);
                 }
-
             }
 
-            busHandle.Stop();
+            bus.Dispose();
         }
     }
 }

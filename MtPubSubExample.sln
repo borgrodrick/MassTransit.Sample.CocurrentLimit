@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{180BFA82-49FC-43E6-9FA1-EB99DF42ED9F}"
 EndProject
@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{21DE24
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{8C86111E-48E5-41A6-A459-32BE8C6A8A2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{D6877D9A-6AC5-464C-8F8A-E5EC19303E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6877D9A-6AC5-464C-8F8A-E5EC19303E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6877D9A-6AC5-464C-8F8A-E5EC19303E97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C86111E-48E5-41A6-A459-32BE8C6A8A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C86111E-48E5-41A6-A459-32BE8C6A8A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C86111E-48E5-41A6-A459-32BE8C6A8A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C86111E-48E5-41A6-A459-32BE8C6A8A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
